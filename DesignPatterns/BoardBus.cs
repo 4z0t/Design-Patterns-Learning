@@ -8,6 +8,8 @@ namespace DesignPatterns
 {
     internal class BoardBus : IBoardAnyCar
     {
+
+        private BusDriver? _driver;
         public void BoardDriver(IDriver driver)
         {
             throw new NotImplementedException();

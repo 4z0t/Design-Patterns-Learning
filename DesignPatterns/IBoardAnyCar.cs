@@ -8,6 +8,7 @@ namespace DesignPatterns
 {
     internal interface IBoardAnyCar
     {
+
         void BoardPassanger(Passanger passanger);
 
         void BoardDriver(IDriver driver);

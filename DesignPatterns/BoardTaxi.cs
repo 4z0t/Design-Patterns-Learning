@@ -8,14 +8,20 @@ namespace DesignPatterns
 {
     internal class BoardTaxi : IBoardAnyCar
     {
+
+        private TaxiDriver? _driver;
+
         public void BoardDriver(IDriver driver)
         {
             throw new NotImplementedException();
         }
         
-        void BoardPassanger(Passanger passanger)
+        public void BoardPassanger(Passanger passanger)
         {
             throw new NotImplementedException();
         }
+
+
+       
     }
 }
