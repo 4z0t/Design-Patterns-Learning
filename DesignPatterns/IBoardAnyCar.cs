@@ -13,5 +13,7 @@ namespace DesignPatterns
         void BoardPassanger(Passanger passanger);
 
         void BoardDriver(IDriver driver);
+
+        public bool CanRide { get; }
     }
 }
