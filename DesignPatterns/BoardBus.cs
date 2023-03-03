@@ -10,6 +10,9 @@ namespace DesignPatterns
     {
 
         private BusDriver? _driver;
+
+        public int MaxPassengersAllowed => 30;
+
         public void BoardDriver(IDriver driver)
         {
             throw new NotImplementedException();

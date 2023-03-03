@@ -8,8 +8,10 @@ namespace DesignPatterns
 {
     internal class BoardTaxi : IBoardAnyCar
     {
-
+        
         private TaxiDriver? _driver;
+
+        public int MaxPassengersAllowed => 4;
 
         public void BoardDriver(IDriver driver)
         {
