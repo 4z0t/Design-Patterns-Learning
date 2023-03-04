@@ -10,6 +10,6 @@ namespace DesignPatterns
     {
         public IBoardAnyCar CreateBoard() => new BoardTaxi();
 
-        public IDriver CreateDriver() => new TaxiDriver();
+        public IDriver CreateDriver() => Singleton<TaxiDriver>.Instance;
     }
 }

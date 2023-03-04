@@ -9,7 +9,7 @@ namespace DesignPatterns
     internal class BusFactory : IBoardFactory
     {
         public IBoardAnyCar CreateBoard() => new BoardBus();
-        public IDriver CreateDriver() => new BusDriver();
+        public IDriver CreateDriver() => Singleton<BusDriver>.Instance;
         
     }
 }
