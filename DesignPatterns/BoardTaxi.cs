@@ -21,7 +21,7 @@ namespace DesignPatterns
         public void BoardDriver(IDriver driver)
         {
             if (_driver is not null) throw new ArgumentException("Taxi already has a driver");
-            if (driver.Licence == "Taxi") throw new ArgumentException("Taxi requires Taxi licenced driver");
+            if (driver.Licence != "Taxi") throw new ArgumentException("Taxi requires Taxi licenced driver");
 
             _driver = driver;
         }

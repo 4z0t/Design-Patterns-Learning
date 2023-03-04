@@ -9,6 +9,7 @@ namespace DesignPatterns
     internal interface IBoardAnyCar
     {
         public int MaxPassengersAllowed { get; }
+        public int PassangersCount { get; }
 
         void BoardPassanger(Passanger passanger);
 
