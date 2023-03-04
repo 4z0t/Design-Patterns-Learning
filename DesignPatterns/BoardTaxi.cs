@@ -9,21 +9,21 @@ namespace DesignPatterns
     internal class BoardTaxi : IBoardAnyCar
     {
 
-        private TaxiDriver? _driver;
+        private IDriver? _driver;
         private List<Passanger> _passangers = new List<Passanger>();
 
         public int MaxPassengersAllowed => 4;
 
         public int PassangersCount => _passangers.Count;
 
-        public bool CanRide => _driver is not null;
+        public bool CanRide => _driver is not null && PassangersCount > 0;
 
         public void BoardDriver(IDriver driver)
         {
             if (_driver is not null) throw new ArgumentException("Taxi already has a driver");
-            if (driver is not TaxiDriver taxiDriver) throw new ArgumentException("Taxi requires Taxi driver");
+            if (driver.Licence == "Taxi") throw new ArgumentException("Taxi requires Taxi licenced driver");
 
-            _driver = taxiDriver;
+            _driver = driver;
         }
 
         public void BoardPassanger(Passanger passanger)

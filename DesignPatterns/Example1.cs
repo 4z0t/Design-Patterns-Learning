@@ -27,8 +27,9 @@ namespace DesignPatterns
 
             for (int i = 0; i < passangers.Length; i++)
             {
-                if (!busLoader.LoadPassanger(passangers[i])) break;
-                Console.WriteLine("Loaded passenger " + i.ToString());
+                if (!busLoader.LoadPassanger(passangers[i]))
+                    break;
+                Console.WriteLine("Bus Loaded passenger " + i.ToString());
             }
 
 
@@ -38,8 +39,9 @@ namespace DesignPatterns
 
             for (int i = 0; i < taxiPassangers.Length; i++)
             {
-                if (!taxiLoader.LoadPassanger(taxiPassangers[i])) break;
-                Console.WriteLine("Loaded passenger " + i.ToString());
+                if (!taxiLoader.LoadPassanger(taxiPassangers[i])) 
+                    break;
+                Console.WriteLine("Taxi Loaded passenger " + i.ToString());
             }
 
         }

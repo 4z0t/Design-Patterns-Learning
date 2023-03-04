@@ -8,8 +8,6 @@ namespace DesignPatterns
 {
     internal class BusDriver : IDriver
     {
-
-
-
+        public string Licence => "Bus";
     }
 }

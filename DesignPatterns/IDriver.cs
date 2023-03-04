@@ -8,6 +8,6 @@ namespace DesignPatterns
 {
     internal interface IDriver
     {
-
+        public string Licence { get; }
     }
 }

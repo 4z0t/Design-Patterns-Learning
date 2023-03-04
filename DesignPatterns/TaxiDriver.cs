@@ -8,5 +8,6 @@ namespace DesignPatterns
 {
     internal class TaxiDriver : IDriver
     {
+        public string Licence => "Taxi";
     }
 }
