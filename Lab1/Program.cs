@@ -11,36 +11,36 @@ namespace Program
     public class Lab1
     {
 
-        private static Passanger[] MakePassangers(int n)
+        private static Passenger[] MakePassengers(int n)
         {
-            Passanger[] passangers = new Passanger[n];
+            Passenger[] passengers = new Passenger[n];
             for (int i = 0; i < n; i++)
             {
-                passangers[i] = new Passanger();
+                passengers[i] = new Passenger();
             }
-            return passangers;
+            return passengers;
         }
 
         public static void Main(string[] args)
         {
-            PassangerLoader busLoader = new PassangerLoader(new BusFactory());
-            PassangerLoader taxiLoader = new PassangerLoader(new TaxiFactory());
+            PassengerLoader busLoader = new PassengerLoader(new BusFactory());
+            PassengerLoader taxiLoader = new PassengerLoader(new TaxiFactory());
 
-            Passanger[] passangers = MakePassangers(40);
+            Passenger[] passengers = MakePassengers(40);
 
-            for (int i = 0; i < passangers.Length; i++)
+            for (int i = 0; i < passengers.Length; i++)
             {
-                if (busLoader.LoadPassanger(passangers[i]))
+                if (busLoader.LoadPassenger(passengers[i]))
                 {
                     Console.WriteLine("Bus Loaded passenger \t№" + i.ToString() +
-                        "\nPassangers in bus: \t" + busLoader.Board.PassangersCount.ToString());
+                        "\nPassangers in bus: \t" + busLoader.Board.PassengersCount.ToString());
                     continue;
                 }
 
-                if (taxiLoader.LoadPassanger(passangers[i]))
+                if (taxiLoader.LoadPassenger(passengers[i]))
                 {
                     Console.WriteLine("Taxi Loaded passenger \t№" + i.ToString() +
-                        "\nPassangers in taxi: \t" + taxiLoader.Board.PassangersCount.ToString());
+                        "\nPassangers in taxi: \t" + taxiLoader.Board.PassengersCount.ToString());
                     continue;
                 }
 

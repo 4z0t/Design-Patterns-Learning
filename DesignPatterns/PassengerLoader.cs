@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public class PassangerLoader
+    public class PassengerLoader
     {
 
         private IDriver _driver;
 
         private IBoardAnyCar _board;
         public IBoardAnyCar Board => _board;
-        public PassangerLoader(IBoardFactory factory)
+        public PassengerLoader(IBoardFactory factory)
         {
             _driver = factory.CreateDriver();
             _board = factory.CreateBoard();
             _board.BoardDriver(_driver);
         }
 
-        public bool LoadPassanger(Passanger passanger)
+        public bool LoadPassenger(Passenger passenger)
         {
             try
             {
-                _board.BoardPassanger(passanger);
+                _board.BoardPassenger(passenger);
                 return true;
             }
             catch(ArgumentException)

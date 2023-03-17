@@ -9,9 +9,9 @@ namespace DesignPatterns
     public interface IBoardAnyCar
     {
         public int MaxPassengersAllowed { get; }
-        public int PassangersCount { get; }
+        public int PassengersCount { get; }
 
-        void BoardPassanger(Passanger passanger);
+        void BoardPassenger(Passenger passenger);
 
         void BoardDriver(IDriver driver);
 

@@ -10,12 +10,12 @@ namespace Program
     internal class Lab2
     {
 
-        private static Passanger[] MakePassangers(int n)
+        private static Passenger[] MakePassangers(int n)
         {
-            Passanger[] passangers = new Passanger[n];
+            Passenger[] passangers = new Passenger[n];
             for (int i = 0; i < n; i++)
             {
-                passangers[i] = new Passanger();
+                passangers[i] = new Passenger();
             }
             return passangers;
         }

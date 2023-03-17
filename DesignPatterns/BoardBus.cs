@@ -10,13 +10,13 @@ namespace DesignPatterns
     {
 
         private IDriver? _driver;
-        private List<Passanger> _passangers = new List<Passanger>();
+        private List<Passenger> _passengers = new List<Passenger>();
 
         public int MaxPassengersAllowed => 30;
 
-        public int PassangersCount => _passangers.Count;
+        public int PassengersCount => _passengers.Count;
 
-        public bool CanRide => _driver is not null && PassangersCount > 0;
+        public bool CanRide => _driver is not null && PassengersCount > 0;
 
         public void BoardDriver(IDriver driver)
         {
@@ -26,11 +26,11 @@ namespace DesignPatterns
             _driver = driver;
         }
 
-        public void BoardPassanger(Passanger passanger)
+        public void BoardPassenger(Passenger passenger)
         {
-            if (PassangersCount == MaxPassengersAllowed) throw new ArgumentException("Passanger can't fit in Bus, limit is reached");
+            if (PassengersCount == MaxPassengersAllowed) throw new ArgumentException("Passenger can't fit in Bus, limit is reached");
 
-            _passangers.Add(passanger);
+            _passengers.Add(passenger);
         }
 
 
