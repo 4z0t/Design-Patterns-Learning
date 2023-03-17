@@ -10,7 +10,7 @@ namespace DesignPatterns
     {
 
         private IDriver? _driver;
-        private List<Passenger> _passengers = new List<Passenger>();
+        private List<Passenger> _passengers = new();
 
         public int MaxPassengersAllowed => 4;
 
@@ -31,6 +31,16 @@ namespace DesignPatterns
         public void BoardPassenger(Passenger passenger)
         {
             if (PassengersCount == MaxPassengersAllowed) throw new ArgumentException("Passenger can't fit in taxi, limit is reached");
+
+            if (passenger.Category != PassengerCategory.Child)
+            {
+                _passengers.Add(passenger);
+                return;
+            }
+
+            if (!HasChildSeat) throw new ArgumentException("Child cant seat without child seat!");
+
+            if (_passengers.Find((p) => p.Category == PassengerCategory.Child) is not null) throw new ArgumentException("There is already child in taxi!");
 
             _passengers.Add(passenger);
         }
