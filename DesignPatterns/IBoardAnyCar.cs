@@ -15,6 +15,8 @@ namespace DesignPatterns
 
         void BoardDriver(IDriver driver);
 
+        public decimal GetTicketPriceFor(Passenger passenger);
+
         public bool CanRide { get; }
     }
 }

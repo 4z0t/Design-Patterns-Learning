@@ -33,6 +33,14 @@ namespace DesignPatterns
             _passengers.Add(passenger);
         }
 
+        public decimal GetTicketPriceFor(Passenger passenger) => passenger.Category switch
+        {
+            PassengerCategory.Adult => 50,
+            PassengerCategory.Child => 0,
+            PassengerCategory.Preferential => 25,
+            _ => throw new ArgumentException("Unknown category of passenger")
+        };
+
 
     }
 }

@@ -33,7 +33,6 @@ namespace DesignPatterns
             _passengers.Add(passenger);
         }
 
-
-
+        public decimal GetTicketPriceFor(Passenger passenger) => 400;
     }
 }
