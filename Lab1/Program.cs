@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using DesignPatterns;
 
-namespace DesignPatterns
+namespace Program
 {
     public class Lab1
     {

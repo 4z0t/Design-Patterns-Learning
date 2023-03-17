@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DesignPatterns;
 
-namespace DesignPatterns
+namespace Program
 {
     internal class Lab2
     {
