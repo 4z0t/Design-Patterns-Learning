@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal interface IBoardAnyCar
+    public interface IBoardAnyCar
     {
         public int MaxPassengersAllowed { get; }
         public int PassangersCount { get; }

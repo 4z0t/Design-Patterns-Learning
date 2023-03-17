@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal class Singleton<T> where T : class, new()
+    public class Singleton<T> where T : class, new()
     {
         private static T? _instance;
         public static T Instance

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal interface IBoardFactory
+    public interface IBoardFactory
     {
         IDriver CreateDriver();
         IBoardAnyCar CreateBoard();

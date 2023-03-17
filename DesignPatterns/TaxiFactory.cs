@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal class TaxiFactory : IBoardFactory
+    public class TaxiFactory : IBoardFactory
     {
         public IBoardAnyCar CreateBoard() => new BoardTaxi();
 

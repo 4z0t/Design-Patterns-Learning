@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal class BoardBus : IBoardAnyCar
+    public class BoardBus : IBoardAnyCar
     {
 
         private IDriver? _driver;

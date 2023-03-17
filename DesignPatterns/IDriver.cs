@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal interface IDriver
+    public interface IDriver
     {
         public string Licence { get; }
     }

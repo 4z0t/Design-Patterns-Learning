@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal class TaxiDriver : IDriver
+    public class TaxiDriver : IDriver
     {
         public string Licence => "Taxi";
     }

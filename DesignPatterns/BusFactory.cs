@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal class BusFactory : IBoardFactory
+    public class BusFactory : IBoardFactory
     {
         public IBoardAnyCar CreateBoard() => new BoardBus();
         public IDriver CreateDriver() => Singleton<BusDriver>.Instance;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal class PassangerLoader
+    public class PassangerLoader
     {
 
         private IDriver _driver;

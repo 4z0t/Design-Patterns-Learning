@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using DesignPatterns;
+
 namespace DesignPatterns
 {
-    internal class Example1
+    public class Lab1
     {
 
         private static Passanger[] MakePassangers(int n)
@@ -19,7 +21,7 @@ namespace DesignPatterns
             return passangers;
         }
 
-        public static void Start()
+        public static void Main(string[] args)
         {
             PassangerLoader busLoader = new PassangerLoader(new BusFactory());
             PassangerLoader taxiLoader = new PassangerLoader(new TaxiFactory());

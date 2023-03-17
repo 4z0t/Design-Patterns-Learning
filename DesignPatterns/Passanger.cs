@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal class Passanger
+    public class Passanger
     {
     }
 }
