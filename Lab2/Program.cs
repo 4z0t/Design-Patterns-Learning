@@ -22,29 +22,7 @@ namespace Program
 
         public static void Main(string[] args)
         {
-            PassangerLoader busLoader = new PassangerLoader(new BusFactory());
-            PassangerLoader taxiLoader = new PassangerLoader(new TaxiFactory());
-
-            Passanger[] passangers = MakePassangers(40);
-
-            for (int i = 0; i < passangers.Length; i++)
-            {
-                if (busLoader.LoadPassanger(passangers[i]))
-                {
-                    Console.WriteLine("Bus Loaded passenger \t№" + i.ToString() +
-                        "\nPassangers in bus: \t" + busLoader.Board.PassangersCount.ToString());
-                    continue;
-                }
-
-                if (taxiLoader.LoadPassanger(passangers[i]))
-                {
-                    Console.WriteLine("Taxi Loaded passenger \t№" + i.ToString() +
-                        "\nPassangers in taxi: \t" + taxiLoader.Board.PassangersCount.ToString());
-                    continue;
-                }
-
-                break;
-            }
+            
         }
 
     }

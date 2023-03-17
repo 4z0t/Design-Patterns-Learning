@@ -10,7 +10,7 @@ namespace DesignPatterns
     {
 
         private IDriver? _driver;
-        private List<Passanger> _passangers = new List<Passanger>();
+        private List<Passenger> _passangers = new List<Passenger>();
 
         public int MaxPassengersAllowed => 4;
 
@@ -26,11 +26,11 @@ namespace DesignPatterns
             _driver = driver;
         }
 
-        public void BoardPassanger(Passanger passanger)
+        public void BoardPassanger(Passenger passenger)
         {
-            if (PassangersCount == MaxPassengersAllowed) throw new ArgumentException("Passanger can't fit in taxi, limit is reached");
+            if (PassangersCount == MaxPassengersAllowed) throw new ArgumentException("Passenger can't fit in taxi, limit is reached");
 
-            _passangers.Add(passanger);
+            _passangers.Add(passenger);
         }
 
 
