@@ -18,7 +18,7 @@ namespace DesignPatterns
 
         public bool CanRide => _driver is not null && PassengersCount > 0;
 
-        public bool HasChildSeat { get; set; }
+        public bool HasChildSeat { get; set; } = false;
 
         public void BoardDriver(IDriver driver)
         {
