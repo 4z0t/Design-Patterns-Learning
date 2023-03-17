@@ -18,6 +18,8 @@ namespace DesignPatterns
 
         public bool CanRide => _driver is not null && PassengersCount > 0;
 
+        public bool HasChildSeat { get; set; }
+
         public void BoardDriver(IDriver driver)
         {
             if (_driver is not null) throw new ArgumentException("Taxi already has a driver");
@@ -34,5 +36,11 @@ namespace DesignPatterns
         }
 
         public decimal GetTicketPriceFor(Passenger passenger) => 400;
+
+        public void InstallChildSeat()
+        {
+            if (HasChildSeat) throw new Exception("Child seat already installed!");
+            HasChildSeat = true;
+        }
     }
 }
