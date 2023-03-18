@@ -9,7 +9,7 @@ namespace DesignPatterns
     public class PassengerLoader
     {
 
-        private IDriver _driver;
+        private IDriver? _driver;
 
         private IBoardAnyCar _board;
         public IBoardAnyCar Board => _board;
@@ -18,6 +18,13 @@ namespace DesignPatterns
             _driver = factory.CreateDriver();
             _board = factory.CreateBoard();
             _board.BoardDriver(_driver);
+        }
+
+        public PassengerLoader (IBoardBuilder builder )
+        {
+            builder.BuildBoard();
+            builder.BuildeDriver();
+            _board = builder.GetBoard();
         }
 
         public bool LoadPassenger(Passenger passenger)
