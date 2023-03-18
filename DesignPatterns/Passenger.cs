@@ -16,6 +16,10 @@ namespace DesignPatterns
 
     public class Passenger
     {
+        public Passenger(PassengerCategory category)
+        {
+            Category = category;   
+        }
         public PassengerCategory Category { get; init; }
     }
 }
