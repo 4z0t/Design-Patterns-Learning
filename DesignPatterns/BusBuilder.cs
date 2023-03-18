@@ -9,12 +9,12 @@ namespace DesignPatterns
     public class BusBuilder : IBoardBuilder
     {
 
-        private BoardBus? _taxi;
+        private BoardBus? _bus;
         private BusDriver? _driver;
 
         public void BuildBoard()
         {
-            _taxi = new BoardBus();
+            _bus = new BoardBus();
         }
 
         public void BuildeDriver()
@@ -24,9 +24,9 @@ namespace DesignPatterns
 
         public IBoardAnyCar GetBoard()
         {
-            if (_driver == null || _taxi == null) throw new Exception("Bus and driver were not created!");
-            _taxi.BoardDriver(_driver);
-            return _taxi;
+            if (_driver == null || _bus == null) throw new Exception("Bus and driver were not created!");
+            _bus.BoardDriver(_driver);
+            return _bus;
         }
     }
 }

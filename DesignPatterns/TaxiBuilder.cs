@@ -9,8 +9,8 @@ namespace DesignPatterns
     public class TaxiBuilder : IBoardBuilder
     {
 
-        private BoardTaxi? _taxi;
-        private TaxiDriver? _driver;
+        protected BoardTaxi? _taxi;
+        protected TaxiDriver? _driver;
 
         public void BuildBoard()
         {
@@ -29,4 +29,14 @@ namespace DesignPatterns
             return _taxi;
         }
     }
+
+    class TaxiWithChildSeatBuilder : TaxiBuilder
+    {
+        public new void  BuildBoard()
+        {
+            base.BuildBoard();
+            _taxi.InstallChildSeat();
+        }
+    }
+
 }

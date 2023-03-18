@@ -14,7 +14,7 @@ namespace Program
         {
             return random.Next(1, 3) switch
             {
-                1=> PassengerCategory.Adult,
+                1 => PassengerCategory.Adult,
                 2 => PassengerCategory.Preferential,
                 3 => PassengerCategory.Child,
                 _ => PassengerCategory.Adult
@@ -58,7 +58,7 @@ namespace Program
                 break;
             }
         }
-    
+
 
     }
 }
