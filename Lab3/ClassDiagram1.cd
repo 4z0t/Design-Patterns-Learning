@@ -9,7 +9,7 @@
     <Lollipop Position="0.45" />
   </Class>
   <Class Name="Lab3.Person" Collapsed="true">
-    <Position X="10.5" Y="2.5" Width="1.5" />
+    <Position X="10.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person.cs</FileName>
@@ -17,14 +17,14 @@
     <Lollipop Position="0.1" />
   </Class>
   <Class Name="Lab3.Stewardess" Collapsed="true">
-    <Position X="12.25" Y="4.25" Width="1.5" />
+    <Position X="12" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Stewardess.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.Pilot" Collapsed="true">
-    <Position X="8.75" Y="4.25" Width="1.5" />
+    <Position X="8.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pilot.cs</FileName>
@@ -38,10 +38,45 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.StewardessesCrew" Collapsed="true">
-    <Position X="6.75" Y="5.5" Width="1.5" />
+    <Position X="5.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StewardessesCrew.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab3.FlyClass" Collapsed="true">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FlyClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab3.FirstClass" Collapsed="true">
+    <Position X="6.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FlyClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab3.BusinessClass" Collapsed="true">
+    <Position X="11" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FlyClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab3.EconomyClass" Collapsed="true">
+    <Position X="8.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FlyClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab3.Plane">
+    <Position X="1.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAAEAAAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAEQ=</HashCode>
+      <FileName>Plane.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Lab3.IComposite&lt;T&gt;">
