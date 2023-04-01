@@ -8,7 +8,11 @@ namespace Lab3
 {
     public class Pilot : Person
     {
-        public Pilot(float _) : base(0)
+        public Pilot():base(0)
+        {
+            
+        }
+        public Pilot(float _) : this()
         {
         }
     }

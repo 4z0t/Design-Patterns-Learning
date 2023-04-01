@@ -8,7 +8,10 @@ namespace Lab3
 {
     public class Stewardess : Person
     {
-        public Stewardess(float _) : base(0)
+        public Stewardess():base(0)
+        {
+        }
+        public Stewardess(float _) : this()
         {
         }
     }

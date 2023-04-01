@@ -18,7 +18,7 @@ namespace Lab3
 
         public int Count => _people.Count;
 
-        public float Weight { get => _people.Sum((p) => p.Weight); init => throw new NotImplementedException(); }
+        public float Weight { get => _people.Sum((p) => p.Weight); init { } }
 
         public void Add(Person element)
         {
