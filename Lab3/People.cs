@@ -30,5 +30,12 @@ namespace Lab3
             if (id < 0 || id >= Count) return null;
             return _people[id];
         }
+
+        public bool Remove(int id)
+        {
+            var person = GetById(id);
+            if (person == null)return false;
+            return _people.Remove(person);
+        }
     }
 }

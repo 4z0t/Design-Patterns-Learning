@@ -11,5 +11,6 @@ namespace Lab3
         public int Count { get; }
         public T? GetById(int id);
         public void Add(T element);
+        public bool Remove(int id);
     }
 }
