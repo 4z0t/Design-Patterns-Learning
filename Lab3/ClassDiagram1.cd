@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Lab3.People">
-    <Position X="5.5" Y="1.75" Width="1.5" />
+    <Position X="5.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAABAQCACAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAIAAAAAAAAAABAAAAAABAQCACAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>People.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.45" />
   </Class>
   <Class Name="Lab3.Person" Collapsed="true">
-    <Position X="10.25" Y="1.75" Width="1.5" />
+    <Position X="2" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person.cs</FileName>
@@ -17,81 +17,95 @@
     <Lollipop Position="0.1" />
   </Class>
   <Class Name="Lab3.Stewardess" Collapsed="true">
-    <Position X="12" Y="3.5" Width="1.5" />
+    <Position X="3" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Stewardess.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.Pilot" Collapsed="true">
-    <Position X="8.5" Y="3.5" Width="1.5" />
+    <Position X="0.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pilot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.PilotsCrew" Collapsed="true">
-    <Position X="3" Y="6" Width="1.5" />
+    <Position X="1" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PilotsCrew.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.StewardessesCrew" Collapsed="true">
-    <Position X="5.5" Y="6" Width="1.5" />
+    <Position X="3.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StewardessesCrew.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.FlyClass" Collapsed="true">
-    <Position X="8.25" Y="6" Width="1.5" />
+    <Position X="7.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FlyClass.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.FirstClass" Collapsed="true">
-    <Position X="6" Y="8" Width="1.5" />
+    <Position X="5.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FlyClasses.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.BusinessClass" Collapsed="true">
-    <Position X="11" Y="8" Width="1.5" />
+    <Position X="10" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FlyClasses.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.EconomyClass" Collapsed="true">
-    <Position X="8.25" Y="8" Width="1.5" />
+    <Position X="7.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FlyClasses.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab3.Plane">
-    <Position X="1" Y="7" Width="1.5" />
+    <Position X="12.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEgAAAEAAAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAEQ=</HashCode>
       <FileName>Plane.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Lab3.IComposite&lt;T&gt;">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+  <Class Name="Lab3.PassangerFlyData">
+    <Position X="14.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAgAAQAAAA=</HashCode>
+      <FileName>PassangerFlyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lab3.IComposite&lt;T&gt;" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>IComposite.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Lab3.IEntity">
-    <Position X="3" Y="0.5" Width="1.5" />
+  <Interface Name="Lab3.IEntity" Collapsed="true">
+    <Position X="14.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IEntity.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Enum Name="Lab3.BaggageStatus" Collapsed="true">
+    <Position X="12.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PassangerFlyData.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
