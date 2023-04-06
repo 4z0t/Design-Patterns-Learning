@@ -21,7 +21,11 @@ namespace Program
             for (int i = 0; i < data.Count; i++)
             {
                 var passengerData = data[i];
-                Console.WriteLine($"Passenger {i} \t FlyClass: {passengerData.type}\t Weight: {passengerData.passenger.Weight,5:F2}\t Surcharge: {passengerData.surcharge,8:F2}\t Baggage status: {passengerData.status}");
+                Console.WriteLine(
+                    $"Passenger {i} \t FlyClass: {passengerData.type}\t" +
+                    $"Weight: {passengerData.passenger.Weight,5:F2}\t" +
+                    $"Surcharge: {passengerData.surcharge,8:F2}\t" +
+                    $"Baggage status: {passengerData.status}");
             }
 
 

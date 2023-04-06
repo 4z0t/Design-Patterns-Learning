@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    public interface IComposite<T>
+    public interface IComposite<T> : IEntity
     {
         public int Count { get; }
         public T? GetById(int id);

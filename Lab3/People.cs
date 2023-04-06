@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    public class People : IComposite<Person>, IEntity
+    public class People : IComposite<Person>
     {
 
         private List<Person> _people;
