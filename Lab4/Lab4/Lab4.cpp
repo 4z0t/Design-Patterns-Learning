@@ -171,7 +171,6 @@ namespace Lab4
 			if (_image.get())
 				return;
 
-			cout << "loaded" << endl;
 			_image = make_unique<T>();
 			if (!_texture_path.empty())
 				_image.get()->setTexture(_texture_path);
@@ -235,9 +234,10 @@ namespace Lab4
 int main()
 {
 	using namespace Lab4;
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!", sf::Style::Fullscreen);
+	window.setFramerateLimit(60);
 	Border rect;
-	rect.setSize({ 20,40 });
+	rect.setSize({ 200,200 });
 	rect.setPosition({ 20,40 });
 	rect.setFillColor(sf::Color::Black);
 	rect.setOutlineThickness(2);
