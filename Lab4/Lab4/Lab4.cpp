@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include <memory>
 
 
 namespace Lab4
@@ -15,29 +16,62 @@ namespace Lab4
 		using invalid_argument::invalid_argument;
 	};
 
-	class Image :public Sprite
+
+	class AImage
 	{
 	public:
-		Image(const string& image_path)
-		{
-			if (!_texture.loadFromFile(image_path))
-				throw FileNotFoundException(image_path);
+		AImage() {};
+		virtual void setTexture(const string&) = 0;
+		virtual void setPosition(const Vector2f&) = 0;
+		virtual void setSize(const Vector2f&) = 0;
+		virtual void draw(RenderWindow&) = 0;
+		virtual ~AImage() {}
+	};
 
-			this->setTexture(_texture);
+	class Image :public Sprite, AImage
+	{
+	public:
+		Image()
+		{
+
 		};
 
-		~Image()
+		virtual void setTexture(const string& path) override
+		{
+			if (!_texture.loadFromFile(path))
+				throw FileNotFoundException(path);
+
+			this->Sprite::setTexture(_texture);
+		}
+
+		virtual void setPosition(const Vector2f& pos) override
+		{
+			this->Sprite::setPosition(pos);
+		}
+
+		virtual void setSize(const Vector2f& size) override
+		{
+			auto texture_size = _texture.getSize();
+			if (texture_size == Vector2u{ 0, 0 }) return;
+			this->Sprite::setScale({ size.x / texture_size.x, size.y / texture_size.y });
+		}
+
+		virtual void draw(RenderWindow& window)override
+		{
+			window.draw(*this);
+		}
+
+		virtual ~Image()
 		{
 
 		}
 
 	private:
 		Texture _texture;
-
 	};
 
 
-	class Border :public RectangleShape
+	class Border : public RectangleShape, AImage
 	{
 	public:
 
@@ -65,10 +99,37 @@ namespace Lab4
 			case Event::MouseMoved:
 				onMouseMoved(e.mouseMove);
 				break;
+			case Event::KeyPressed:
+				onKeyPressed(e.key);
+				break;
 			default:
 				break;
 			}
 		}
+
+		void onKeyPressed(const Event::KeyEvent& e)
+		{
+			auto curPpos = getSize();
+			switch (e.code)
+			{
+			case Keyboard::Key::Up:
+				setSize(curPpos + Vector2f{ 0, 1 });
+				break;
+			case Keyboard::Key::Down:
+				setSize(curPpos + Vector2f{ 0, -1 });
+				break;
+			case Keyboard::Key::Right:
+				setSize(curPpos + Vector2f{ 1, 0 });
+				break;
+			case Keyboard::Key::Left:
+				setSize(curPpos + Vector2f{ -1, 0 });
+				break;
+
+			default:
+				break;
+			}
+		}
+
 		void onMouseButtonReleased(const Event::MouseButtonEvent& e)
 		{
 			_movingState = false;
@@ -91,6 +152,65 @@ namespace Lab4
 				_movingState = true;
 				_movingOffset = getPosition() - Vector2f(e.x, e.y);
 			}
+
+			if (e.button == Mouse::Right)
+			{
+				if (_isRightCliked)
+				{
+
+					loadImage<Image>();
+				}
+				_isRightCliked = true;
+			}
+		}
+
+
+		template<class T>
+		void loadImage()
+		{
+			if (_image.get())
+				return;
+
+			cout << "loaded" << endl;
+			_image = make_unique<T>();
+			if (!_texture_path.empty())
+				_image.get()->setTexture(_texture_path);
+			_image.get()->setPosition(getPosition());
+			_image.get()->setSize(getSize());
+
+		}
+
+
+		virtual void setTexture(const string& texture_path) override
+		{
+			_texture_path = texture_path;
+			if (!_image.get())
+				return;
+
+			_image.get()->setTexture(_texture_path);
+		}
+
+		virtual void setPosition(const Vector2f& pos) override
+		{
+			this->RectangleShape::setPosition(pos);
+
+			if (_image.get())
+				_image.get()->setPosition(pos);
+		}
+
+		virtual void setSize(const Vector2f& size) override
+		{
+			this->RectangleShape::setSize(size);
+
+			if (_image.get())
+				_image.get()->setSize(size);
+		}
+
+		virtual void draw(RenderWindow& window)override
+		{
+			window.draw(*this);
+			if (_image.get())
+				_image.get()->draw(window);
 		}
 
 
@@ -99,11 +219,12 @@ namespace Lab4
 
 		}
 
-
 	private:
+		bool _isRightCliked = false;
 		bool _movingState = false;
 		Vector2f _movingOffset = { 0,0 };
-
+		string _texture_path;
+		unique_ptr<Image> _image;
 	};
 
 }
@@ -118,12 +239,10 @@ int main()
 	Border rect;
 	rect.setSize({ 20,40 });
 	rect.setPosition({ 20,40 });
-	rect.setFillColor(sf::Color::Blue);
+	rect.setFillColor(sf::Color::Black);
 	rect.setOutlineThickness(2);
 	rect.setOutlineColor(sf::Color::Green);
-
-	Lab4::Image image("img.png");
-	image.setPosition({ 50,100 });
+	rect.setTexture("img.png");
 
 	while (window.isOpen())
 	{
@@ -145,8 +264,7 @@ int main()
 		}
 
 		window.clear();
-		window.draw(rect);
-		window.draw(image);
+		rect.draw(window);
 		window.display();
 	}
 
