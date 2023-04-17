@@ -28,7 +28,7 @@ namespace Lab4
 		virtual ~AImage() {}
 	};
 
-	class Image :public Sprite, AImage
+	class Image :public Sprite, public AImage
 	{
 	public:
 		Image()
@@ -223,7 +223,7 @@ namespace Lab4
 		bool _movingState = false;
 		Vector2f _movingOffset = { 0,0 };
 		string _texture_path;
-		unique_ptr<Image> _image;
+		unique_ptr<AImage> _image;
 	};
 
 }
