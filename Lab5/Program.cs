@@ -10,10 +10,12 @@ namespace Lab5
                 new IExpression[]
                 {
                     new RemoveMultipleSpacesExpression(),
+                    new DashCorrectionExpression(),
+
                 }
             );
 
-            var s = "aaa   a a  a     a v v v  ";
+            var s = "aaa   a-a  a   - -  a v v v  ";
             s = interpreter.Process(s);
             Console.WriteLine(s);
 
