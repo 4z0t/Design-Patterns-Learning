@@ -7,11 +7,10 @@ using System.Text.RegularExpressions;
 
 namespace Lab5
 {
-    internal class RemoveMultipleSpacesExpression : IExpression
+    internal class RemoveMultipleSpacesExpression : RemoveMultipleExpression
     {
-        public void Interpret(Context context)
+        public RemoveMultipleSpacesExpression() : base(" ")
         {
-            context.input = Regex.Replace(context.input, "\\s+", " ");
         }
     }
 }
