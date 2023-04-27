@@ -12,10 +12,12 @@ namespace Lab5
                     new RemoveMultipleSpacesExpression(),
                     new DashCorrectionExpression(),
                     new QuotesCorrectionExpression(),
+                    new RemoveSpaceAfterExpression("("),
+                    new RemoveSpaceBeforeExpression( new string []{ ")", ".", "," }),
                 }
             );
-            
-            var s = "a“hellofdsfdf d fds  fds   1 12 12 s” - “world  a-a  a   - -  a v v v  ";
+
+            var s = "a“hellofdsfdf d fds  fds   1 12 12 s” - “world  a-a  a   - -  a v v v . , (  ) k";
             s = interpreter.Process(s);
             Console.WriteLine(s);
 
