@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Lab5
 {
-    internal class DashCorrectionExpression : IExpression
+    internal class CorrectQuoteExpression : IExpression
     {
         public void Interpret(Context context)
         {
-            context.input = Regex.Replace(context.input, " - ", " — ");
+            context.input = Regex.Replace(context.input, "“(.)”", "«$1»");
         }
     }
 }

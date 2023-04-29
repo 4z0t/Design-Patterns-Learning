@@ -10,8 +10,8 @@ namespace Lab5
                 new IExpression[]
                 {
                     new RemoveMultipleSpacesExpression(),
-                    new DashCorrectionExpression(),
-                    new QuotesCorrectionExpression(),
+                    new CorrectDashExpression(),
+                    new CorrectQuoteExpression(),
                     new RemoveSpaceAfterExpression("("),
                     new RemoveSpaceBeforeExpression( new string []{ ")", ".", "," }),
                     new RemoveMultipleExpression("\n"),
