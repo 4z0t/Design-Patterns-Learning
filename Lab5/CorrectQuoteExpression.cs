@@ -11,7 +11,7 @@ namespace Lab5
     {
         public void Interpret(Context context)
         {
-            context.input = Regex.Replace(context.input, "“(.)”", "«$1»");
+            context.input = Regex.Replace(context.input, "“(.+)”", "«$1»");
         }
     }
 }

@@ -9,17 +9,15 @@ namespace Lab5
             Interpreter interpreter = new Interpreter(
                 new IExpression[]
                 {
-                    new RemoveMultipleSpacesExpression(),
                     new CorrectDashExpression(),
                     new CorrectQuoteExpression(),
                     new RemoveSpaceAfterExpression("("),
                     new RemoveSpaceBeforeExpression( new string []{ ")", ".", "," }),
-                    new RemoveMultipleExpression("\n"),
-                    new RemoveMultipleExpression("\t"),
+                    new RemoveMultipleExpression(new string []{"\n", "\t", " "}),
                 }
             );
 
-            var s = "a“hellofdsfdf d fds  fds   1 12 12 s” - “world  a-a  a   - -  a v v v . , (  ) k\n" +
+            var s = "\t\t       .    “hello” - “world - . ,   (  ) k\n" +
                 "\n" +
                 "\n" +
                 "\t\t\tssssssssssss";
