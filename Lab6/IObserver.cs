@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lab6
 {
+    internal interface IObserver<Observable> where Observable : IObservable
+    {
+        void Update(Observable observable);
+    }
+
     internal interface IObserver
     {
+        void Update(object observable);
     }
 }
