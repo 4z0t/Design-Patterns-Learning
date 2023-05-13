@@ -37,7 +37,7 @@ namespace Lab6
         public void Verify()
         {
             Random rnd = new Random();
-            grades.Student = "Maksim";
+            grades.Student = "Семен";
             grades.Grade = rnd.Next(2, 5);
 
 

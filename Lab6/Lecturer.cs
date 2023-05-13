@@ -22,8 +22,9 @@ namespace Lab6
             if (ob == null) return;
 
             Console.WriteLine(grades.Time);
+            Console.Write("{0}:\t", Name);
             if (grades.Time <= DateTime.Today)
-                Console.WriteLine("Преподаватель по математике просрочил отчётность");
+                Console.WriteLine("Преподаватель просрочил отчётность");
             else if (grades.Grade == 2)
                 Console.WriteLine("У ученика {0} неуспеваемость по предмету, он получил {1}\n", grades.Student, grades.Grade);
             else

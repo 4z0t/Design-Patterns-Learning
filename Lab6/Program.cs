@@ -7,13 +7,15 @@ namespace Lab6
         static void Main(string[] args)
         {
             Dean dean = new Dean();
-            Lecturer teacher = new Lecturer("Валерий Михайлович", dean);
+            Lecturer teacher1 = new Lecturer("Дмирий олегович", dean);
+            Lecturer teacher2 = new Lecturer(" Иван Иванович ", dean);
             // проверка отчётов
             dean.Verify();
 
             dean.Verify();
 
-            teacher.StopGrades();
+            teacher1.StopGrades();
+            teacher2.StopGrades();
         }
     }
 }
