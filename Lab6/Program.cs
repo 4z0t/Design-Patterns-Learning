@@ -9,13 +9,11 @@ namespace Lab6
             Dean dean = new Dean();
             Lecturer teacher = new Lecturer("Валерий Михайлович", dean);
             // проверка отчётов
-            dean.Verification();
+            dean.Verify();
 
-            dean.Verification();
+            dean.Verify();
 
             teacher.StopGrades();
-
-            Console.Read();
         }
     }
 }

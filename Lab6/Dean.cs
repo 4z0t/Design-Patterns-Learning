@@ -34,7 +34,7 @@ namespace Lab6
             }
         }
 
-        public void Verification()
+        public void Verify()
         {
             Random rnd = new Random();
             grades.Student = "Maksim";
